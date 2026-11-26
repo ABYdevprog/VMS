@@ -1,0 +1,12 @@
+services:
+  vms:
+    build: .
+    container_name: vms-autonomous-agency
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./data:/app/data
+      - ./backlog:/app/backlog
+    env_file:
+      - .env
