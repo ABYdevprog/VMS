@@ -418,21 +418,23 @@ export async function runSalesWorker(shiftRunId?: number): Promise<{
 
     const variant: 'A' | 'B' = i === 0 ? 'A' : 'B';
     const hookStyle =
-      variant === 'A' ? 'İşletmeye Özel Hazır Canlı Demo Daveti' : 'Mesai Dışı Kaçan Randevu Maliyeti Kancası';
+      variant === 'A'
+        ? '2 Adımlı İzinli Erişim (Linksiz İlk Mesaj + Yanıt Sonrası Özel Demo)'
+        : 'Mesai Dışı Yedek Asistan Gözlemi (Linksiz İzin İsteme)';
 
     const publicBase =
       db.select().from(systemSettings).where(eq(systemSettings.key, 'public_base_url')).get()?.value ||
-      'http://localhost:3000';
-    const demoUrl = `${publicBase.replace(/\/$/, '')}/demo/${slug}`;
+      'https://abydevprog.github.io/VMS';
+    const demoUrl = `${publicBase.replace(/\/$/, '')}/demo/${slug}/`;
 
     const llmRes = await runAgentIntelligence({
       agentId: 'sales',
       systemPrompt: playbook?.systemPrompt || 'Satış Uzmanı Avcı',
-      userPrompt: `İşletme: ${businessName}, Varyant: ${variant} (${hookStyle}), Demo Linki: ${demoUrl}. Kazanan Playbook Kuralları: ${winningPatterns.join('; ')}. Kısa, samimi bir WhatsApp satış mesajı üret.`,
+      userPrompt: `İşletme: ${businessName}, Varyant: ${variant} (${hookStyle}), İzole Özel Demo Linki: ${demoUrl}. Kazanan Kurallar: ${winningPatterns.join('; ')}. İlk mesajda ASLA link atmadan izin isteyen Adım 1 mesajını ve yanıt gelince atılacak Adım 2 VIP demo mesajını üret.`,
       fallbackGenerator: () =>
         variant === 'A'
-          ? `Merhaba ${businessName} ekibi 👋 Şubeniz için mesai saatleri dışında gelen WhatsApp sorularını saniyeler içinde yanıtlayıp otomatik randevu alan size özel canlı bir önizleme hazırladık. Kendi müşteriniz gibi yazıp 30 saniyede test edebilirsiniz: ${demoUrl}`
-          : `Merhaba ${businessName} yetkilisi 👋 ${city}/${district} bölgesindeki ${tpl.label.toLocaleLowerCase('tr-TR')} işletmelerinde akşam 19:00 sonrası gelen mesajların %50'si sabaha kadar başka işletmeye gidiyor. Sizin adınıza kurduğumuz 7/24 AI randevu asistanını buradan canlı deneyebilirsiniz: ${demoUrl}`,
+          ? `[ADIM 1 — İLK TEMAS (LİNKSİZ / SPAM RİSKSİZ)]: Merhaba ${businessName} ekibi, akşam 19:00 sonrası ve yoğun saatlerde WhatsApp/Instagram'dan gelen fiyat ve randevu sorularını ekibinize destek olarak 3 saniyede yanıtlayan, sadece sizin hizmet listenize özel bir test asistanı hazırladım. İncelemeniz için size özel kapalı test ekranını buradan paylaşmamı ister misiniz?\n\n[ADIM 2 — "OLUR GÖNDERİN" YANITI GELİNCE]: Teşekkürler! Sadece ${businessName} için hazırladığımız özel test ekranı burada, kendi müşteriniz gibi yazıp deneyebilirsiniz (beğenirseniz 14 gün ücretsiz kuruyoruz): ${demoUrl}`
+          : `[ADIM 1 — İLK TEMAS (LİNKSİZ / İZİNLİ)]: Merhaba ${businessName} yetkilisi, ${city}/${district} bölgesinde akşam saatlerinde gelen mesajların önemli kısmı sabaha kadar beklediği için kaçabiliyor. Mevcut düzeninizi bozmadan sadece mesai dışı ve yoğun anlarda devreye giren size özel bir WhatsApp karşılama simülasyonu kurguladık. 30 saniyede göz atmanız için özel bağlantıyı iletmem uygun olur mu?\n\n[ADIM 2 — ONAY SONRASI ÖZEL SUNUM]: Memnuniyetle paylaşıyorum; yalnızca şubenize özel hazırlanan canlı test ekranı: ${demoUrl}`,
     });
 
     const msgInsert = db
