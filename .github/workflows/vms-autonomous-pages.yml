@@ -20,22 +20,22 @@ permissions:
   contents: write
   pages: write
   id-token: write
+  actions: read
 
 concurrency:
   group: "vms-pages-and-shifts"
   cancel-in-progress: false
 
 jobs:
-  run-shifts-and-deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build-and-shifts:
     runs-on: ubuntu-latest
     env:
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
     steps:
       - name: Depoyu İndir
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Node.js 22 Kurulumu
         uses: actions/setup-node@v4
@@ -70,17 +70,27 @@ jobs:
           git config user.name "VMS Autonomous Agency (COO Atlas)"
           git config user.email "atlas-bot@users.noreply.github.com"
           git add data/agency-state.json backlog/ || true
-          git diff --staged --quiet || git commit -m "chore(kaizen): otomatik vardiya ve canli demo guncellemesi [skip ci]"
-          git push origin main || true
+          if ! git diff --staged --quiet; then
+            git commit -m "chore(kaizen): otomatik vardiya ve canli demo guncellemesi [skip ci]"
+            git pull --rebase origin main || true
+            git push origin main || true
+          fi
 
       - name: GitHub Pages Yapılandırması
         uses: actions/configure-pages@v5
 
       - name: Yayın Paketini Yükle
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: "./public-pages"
 
+  deploy:
+    needs: build-and-shifts
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
       - name: GitHub Pages Üzerinde Canlıya Al
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
