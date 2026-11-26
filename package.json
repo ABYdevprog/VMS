@@ -9,6 +9,7 @@
     "start": "next start --port 3000",
     "vms": "tsx src/cli/vms.ts",
     "worker": "tsx src/cli/worker.ts",
+    "export:pages": "tsx src/cli/export-pages.ts",
     "db:seed": "tsx src/db/seed.ts",
     "test": "vitest run"
   },

@@ -1,9 +1,10 @@
 # dependencies
 /node_modules
 
-# next.js
+# next.js & static pages build
 /.next/
 /out/
+/public-pages/
 
 # runtime data & local databases
 /data/*.db

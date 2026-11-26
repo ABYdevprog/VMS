@@ -1,0 +1,86 @@
+name: VMS 7/24 Günlük Vardiya & GitHub Pages Yayını
+
+on:
+  push:
+    branches: ["main"]
+  schedule:
+    # Europe/Istanbul (UTC+3): 09:00, 12:30, 16:00, 22:00
+    - cron: "0 6 * * *"
+    - cron: "30 9 * * *"
+    - cron: "0 13 * * *"
+    - cron: "0 19 * * *"
+  workflow_dispatch:
+    inputs:
+      shift:
+        description: "Çalıştırılacak vardiya (catchup | morning | midday | afternoon | night | all)"
+        required: false
+        default: "catchup"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "vms-pages-and-shifts"
+  cancel-in-progress: false
+
+jobs:
+  run-shifts-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+    steps:
+      - name: Depoyu İndir
+        uses: actions/checkout@v4
+
+      - name: Node.js 22 Kurulumu
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Bağımlılıkları Yükle
+        run: |
+          npm install --include=dev
+          npm rebuild better-sqlite3 esbuild
+
+      - name: Mevcut Ajans Hafızasını Yükle
+        run: npx tsx src/cli/export-pages.ts --import-then-export
+
+      - name: Zamanlanmış veya Manuel Vardiyayı Çalıştır
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: |
+          SHIFT_ARG="${{ github.event.inputs.shift || 'catchup' }}"
+          if [ "$SHIFT_ARG" = "catchup" ]; then
+            npm run vms -- shift:catchup
+          else
+            npm run vms -- shift:run "$SHIFT_ARG"
+          fi
+
+      - name: Güncel Hafızayı ve Canlı GitHub Pages Paketini Üret
+        run: npx tsx src/cli/export-pages.ts
+
+      - name: Yeni Üretilen Demoları ve Kaizen Hafızasını Depoya Kaydet
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: |
+          git config user.name "VMS Autonomous Agency (COO Atlas)"
+          git config user.email "atlas-bot@users.noreply.github.com"
+          git add data/agency-state.json backlog/ || true
+          git diff --staged --quiet || git commit -m "chore(kaizen): otomatik vardiya ve canli demo guncellemesi [skip ci]"
+          git push origin main || true
+
+      - name: GitHub Pages Yapılandırması
+        uses: actions/configure-pages@v5
+
+      - name: Yayın Paketini Yükle
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "./public-pages"
+
+      - name: GitHub Pages Üzerinde Canlıya Al
+        id: deployment
+        uses: actions/deploy-pages@v4
