@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-11-27T02:02:09.993Z",
+  "exportedAt": "2026-11-27T16:14:41.047Z",
   "agents": [
     {
       "id": "coo",
@@ -11,8 +11,8 @@
       "dailyBudgetUsd": 1,
       "playbookVersion": 1,
       "status": "idle",
-      "tasksCompleted": 1,
-      "lastActiveAt": "2026-11-26T14:57:52.225Z"
+      "tasksCompleted": 2,
+      "lastActiveAt": "2026-11-27T16:14:40.618Z"
     },
     {
       "id": "researcher",
@@ -24,8 +24,8 @@
       "dailyBudgetUsd": 0.5,
       "playbookVersion": 1,
       "status": "idle",
-      "tasksCompleted": 1,
-      "lastActiveAt": "2026-11-26T14:57:52.213Z"
+      "tasksCompleted": 2,
+      "lastActiveAt": "2026-11-27T16:14:40.612Z"
     },
     {
       "id": "pm",
@@ -37,8 +37,8 @@
       "dailyBudgetUsd": 0.6,
       "playbookVersion": 1,
       "status": "idle",
-      "tasksCompleted": 1,
-      "lastActiveAt": "2026-11-26T14:57:52.222Z"
+      "tasksCompleted": 2,
+      "lastActiveAt": "2026-11-27T16:14:40.616Z"
     },
     {
       "id": "builder",
@@ -50,8 +50,8 @@
       "dailyBudgetUsd": 1,
       "playbookVersion": 1,
       "status": "idle",
-      "tasksCompleted": 1,
-      "lastActiveAt": "2026-11-26T14:57:52.232Z"
+      "tasksCompleted": 2,
+      "lastActiveAt": "2026-11-27T16:14:40.620Z"
     },
     {
       "id": "growth",
@@ -63,8 +63,8 @@
       "dailyBudgetUsd": 0.5,
       "playbookVersion": 2,
       "status": "idle",
-      "tasksCompleted": 1,
-      "lastActiveAt": "2026-11-26T14:57:52.256Z"
+      "tasksCompleted": 2,
+      "lastActiveAt": "2026-11-27T16:14:40.622Z"
     },
     {
       "id": "sales",
@@ -76,8 +76,8 @@
       "dailyBudgetUsd": 0.7,
       "playbookVersion": 2,
       "status": "idle",
-      "tasksCompleted": 2,
-      "lastActiveAt": "2026-11-26T14:57:52.256Z"
+      "tasksCompleted": 4,
+      "lastActiveAt": "2026-11-27T16:14:40.629Z"
     },
     {
       "id": "kaizen",
@@ -187,6 +187,39 @@
   ],
   "shifts": [
     {
+      "id": 7,
+      "shiftType": "afternoon",
+      "shiftDate": "2026-11-27",
+      "triggerSource": "antigravity",
+      "status": "completed",
+      "summary": "🌇 İkindi Vardiyası: 2 yeni KOBİ adayı puanlandı, özel canlı demolar (/demo/ozel-veradent-agiz-ve-dis-sagligi-atasehir-6, /demo/ozel-novadent-klinik-atasehir-7) üretildi ve onay kuyruğuna eklendi (ONAY-103 (PENDING), ONAY-104 (PENDING)).",
+      "metricsJson": "{\"createdLeads\":2,\"createdDemos\":[\"/demo/ozel-veradent-agiz-ve-dis-sagligi-atasehir-6\",\"/demo/ozel-novadent-klinik-atasehir-7\"],\"queuedCodes\":[\"ONAY-103 (PENDING)\",\"ONAY-104 (PENDING)\"]}",
+      "startedAt": "2026-11-27T16:14:40.623Z",
+      "completedAt": "2026-11-27T16:14:40.629Z"
+    },
+    {
+      "id": 6,
+      "shiftType": "midday",
+      "shiftDate": "2026-11-27",
+      "triggerSource": "antigravity",
+      "status": "completed",
+      "summary": "☀️ Öğle Vardiyası: 5 canlı demo doğrulandı, yeni BuildSpec (backlog/build-specs/2026-11-27-kobi-modul-gelistirme.md) ve SEO rehberi (/blog/istanbul-dis-agiz-sagligi-klinigi-isletmelerinde-whatsapp-ai-ile-0621) yayınlandı.",
+      "metricsJson": "{\"buildSpecPath\":\"backlog/build-specs/2026-11-27-kobi-modul-gelistirme.md\",\"verifiedDemos\":5}",
+      "startedAt": "2026-11-27T16:14:40.619Z",
+      "completedAt": "2026-11-27T16:14:40.623Z"
+    },
+    {
+      "id": 5,
+      "shiftType": "morning",
+      "shiftDate": "2026-11-27",
+      "triggerSource": "antigravity",
+      "status": "completed",
+      "summary": "🌅 Sabah Vardiyası: İstanbul/Ataşehir Diş & Ağız Sağlığı Kliniği fırsatı seçildi. Sabah sprinti onaylandı: Hedef İstanbul/Ataşehir Diş & Ağız Sağlığı Kliniği dikeyi. Öğle vardiyasında SEO rehberi + BuildSpec üretilecek; ikindi vardiyasında kişiselleştirilmiş canlı demolar hazırlanıp onay kuyruğuna sunulacak.",
+      "metricsJson": "{\"sector\":\"dental\",\"city\":\"İstanbul\",\"district\":\"Ataşehir\"}",
+      "startedAt": "2026-11-27T16:14:40.608Z",
+      "completedAt": "2026-11-27T16:14:40.618Z"
+    },
+    {
       "id": 4,
       "shiftType": "night",
       "shiftDate": "2026-11-26",
@@ -232,6 +265,104 @@
     }
   ],
   "tasks": [
+    {
+      "id": 15,
+      "shiftRunId": 7,
+      "agentId": "sales",
+      "title": "Özel NovaDent Klinik (Ataşehir) Canlı Demo & Varyant B Satış Paketi",
+      "executionMode": "antigravity_native",
+      "modelUsed": "antigravity-native (gemini-4-hydrogen)",
+      "tokensUsed": 0,
+      "costUsd": 0,
+      "status": "completed",
+      "outputSummary": "/demo/ozel-novadent-klinik-atasehir-7 oluşturuldu ve ONAY-104 koduyla onay kapısına iletildi.",
+      "artifactPath": "/demo/ozel-novadent-klinik-atasehir-7",
+      "createdAt": "2026-11-27T16:14:40.629Z"
+    },
+    {
+      "id": 14,
+      "shiftRunId": 7,
+      "agentId": "sales",
+      "title": "Özel VeraDent Ağız ve Diş Sağlığı (Ataşehir) Canlı Demo & Varyant A Satış Paketi",
+      "executionMode": "antigravity_native",
+      "modelUsed": "antigravity-native (gemini-4-hydrogen)",
+      "tokensUsed": 0,
+      "costUsd": 0,
+      "status": "completed",
+      "outputSummary": "/demo/ozel-veradent-agiz-ve-dis-sagligi-atasehir-6 oluşturuldu ve ONAY-103 koduyla onay kapısına iletildi.",
+      "artifactPath": "/demo/ozel-veradent-agiz-ve-dis-sagligi-atasehir-6",
+      "createdAt": "2026-11-27T16:14:40.627Z"
+    },
+    {
+      "id": 13,
+      "shiftRunId": 6,
+      "agentId": "growth",
+      "title": "Türkçe SEO Rehberi Yayını: İstanbul Diş & Ağız Sağlığı Kliniği İşletmelerinde W...",
+      "executionMode": "antigravity_native",
+      "modelUsed": "antigravity-native (gemini-4-hydrogen)",
+      "tokensUsed": 0,
+      "costUsd": 0,
+      "status": "completed",
+      "outputSummary": "/blog/istanbul-dis-agiz-sagligi-klinigi-isletmelerinde-whatsapp-ai-ile-0621 adresinde yeni organik içerik ve sosyal medya kancası yayınlandı.",
+      "artifactPath": "/blog/istanbul-dis-agiz-sagligi-klinigi-isletmelerinde-whatsapp-ai-ile-0621",
+      "createdAt": "2026-11-27T16:14:40.622Z"
+    },
+    {
+      "id": 12,
+      "shiftRunId": 6,
+      "agentId": "builder",
+      "title": "QA Doğrulaması (5 Demo) & Antigravity BuildSpec Üretimi",
+      "executionMode": "antigravity_native",
+      "modelUsed": "antigravity-native (gemini-4-carbon)",
+      "tokensUsed": 0,
+      "costUsd": 0,
+      "status": "completed",
+      "outputSummary": "5 canlı demo şablonu doğrulandı; yeni mühendislik iş emri backlog/build-specs/2026-11-27-kobi-modul-gelistirme.md dosyasına yazıldı.",
+      "artifactPath": "backlog/build-specs/2026-11-27-kobi-modul-gelistirme.md",
+      "createdAt": "2026-11-27T16:14:40.620Z"
+    },
+    {
+      "id": 11,
+      "shiftRunId": 5,
+      "agentId": "coo",
+      "title": "Günlük 4 Vardiya Koordinasyon Planı",
+      "executionMode": "antigravity_native",
+      "modelUsed": "antigravity-native (gemini-4-carbon)",
+      "tokensUsed": 0,
+      "costUsd": 0,
+      "status": "completed",
+      "outputSummary": "Sabah sprinti onaylandı: Hedef İstanbul/Ataşehir Diş & Ağız Sağlığı Kliniği dikeyi. Öğle vardiyasında SEO rehberi + BuildSpec üretilecek; ikindi vardiyasında kişiselleştirilmiş canlı demolar hazırlanıp onay kuyruğuna sunulacak.",
+      "artifactPath": null,
+      "createdAt": "2026-11-27T16:14:40.618Z"
+    },
+    {
+      "id": 10,
+      "shiftRunId": 5,
+      "agentId": "pm",
+      "title": "Diş & Ağız Sağlığı Kliniği Değer Önerisi & Paket Kurgusu",
+      "executionMode": "antigravity_native",
+      "modelUsed": "antigravity-native (gemini-4-neon)",
+      "tokensUsed": 0,
+      "costUsd": 0,
+      "status": "completed",
+      "outputSummary": "\"Ayda 68.000 ₺ değerinde kaçan randevuyu, günde sadece 100 ₺ maliyetle 7/24 yakalayın\" konumlandırması ve 14 gün kredi kartsız canlı demo kancası aktif edildi.",
+      "artifactPath": null,
+      "createdAt": "2026-11-27T16:14:40.616Z"
+    },
+    {
+      "id": 9,
+      "shiftRunId": 5,
+      "agentId": "researcher",
+      "title": "İstanbul/Ataşehir Diş & Ağız Sağlığı Kliniği Fırsat Taraması",
+      "executionMode": "antigravity_native",
+      "modelUsed": "antigravity-native (gemini-4-hydrogen)",
+      "tokensUsed": 0,
+      "costUsd": 0,
+      "status": "completed",
+      "outputSummary": "İstanbul/Ataşehir bölgesindeki Diş & Ağız Sağlığı Kliniği işletmelerinde mesai dışı WhatsApp dönüş süresi ortalama 4,5 saattir; bu gecikme ayda ortalama 35.000 ₺ - 75.000 ₺ ciro kaybı yaratmaktadır.",
+      "artifactPath": null,
+      "createdAt": "2026-11-27T16:14:40.612Z"
+    },
     {
       "id": 8,
       "shiftRunId": 4,
@@ -347,6 +478,36 @@
   ],
   "leads": [
     {
+      "id": 7,
+      "businessName": "Özel NovaDent Klinik (Ataşehir)",
+      "slug": "ozel-novadent-klinik-atasehir-7",
+      "sector": "dental",
+      "city": "İstanbul",
+      "district": "Ataşehir",
+      "phone": "+905320002007",
+      "email": "iletisim@ozel-novadent-klinik.com.tr",
+      "instagramHandle": "@ozelnovadentklinik",
+      "painPoint": "Randevu hatırlatması manuel yapıldığı için %22 oranında gelmeyen hasta (no-show) kaybı",
+      "leadScore": 91,
+      "stage": "AWAITING_APPROVAL",
+      "createdAt": "2026-11-27T16:14:40.624Z"
+    },
+    {
+      "id": 6,
+      "businessName": "Özel VeraDent Ağız ve Diş Sağlığı (Ataşehir)",
+      "slug": "ozel-veradent-agiz-ve-dis-sagligi-atasehir-6",
+      "sector": "dental",
+      "city": "İstanbul",
+      "district": "Ataşehir",
+      "phone": "+905320002006",
+      "email": "iletisim@ozel-veradent-agiz-ve-dis-sagligi.com.tr",
+      "instagramHandle": "@ozelveradentagizvedissagligi",
+      "painPoint": "Mesai saatleri dışında WhatsApp ve Instagram üzerinden gelen implant/fiyat sorularına geç dönüş yapılması nedeniyle hasta kaybı",
+      "leadScore": 88,
+      "stage": "AWAITING_APPROVAL",
+      "createdAt": "2026-11-27T16:14:40.624Z"
+    },
+    {
       "id": 5,
       "businessName": "Zeytin Dalı Gurme Restoran & Davet (Ataşehir)",
       "slug": "zeytin-dali-gurme-restoran-davet-atasehir-5",
@@ -423,6 +584,48 @@
     }
   ],
   "demos": [
+    {
+      "id": 7,
+      "leadId": 7,
+      "productSlug": "kobi-asistan-pro",
+      "slug": "ozel-novadent-klinik-atasehir-7",
+      "headline": "Özel NovaDent Klinik (Ataşehir) — 7/24 Akıllı WhatsApp & Randevu Asistanı",
+      "subheadline": "İstanbul / Ataşehir şubeniz için özel hazırlanan canlı müşteri karşılama ve randevu simülasyonu.",
+      "sector": "dental",
+      "city": "İstanbul / Ataşehir",
+      "accentColor": "#0f766e",
+      "assistantName": "Selin (Özel NovaDent Klinik (Ataşehir) Dijital Hasta Koordinatörü)",
+      "welcomeMessage": "Merhaba! 👋 Özel NovaDent Klinik (Ataşehir) dijital hattına hoş geldiniz. Hizmetlerimiz, güncel fiyat aralıklarımız veya uygun randevu saatlerimiz için hemen yazabilirsiniz.",
+      "servicesJson": "[{\"name\":\"İlk Muayene & Panoramik Röntgen\",\"duration\":\"30 dk\",\"priceRange\":\"Ücretsiz Ön Değerlendirme\"},{\"name\":\"İmplant & Zirkonyum Planlama\",\"duration\":\"45 dk\",\"priceRange\":\"Hekim Muayenesi Sonrası Netleşir\"},{\"name\":\"Diş Taşı Temizliği & Beyazlatma\",\"duration\":\"40 dk\",\"priceRange\":\"2.500 ₺ - 6.500 ₺\"},{\"name\":\"Kanal Tedavisi & Dolgu\",\"duration\":\"45 dk\",\"priceRange\":\"3.000 ₺ - 5.500 ₺\"}]",
+      "faqJson": "[{\"q\":\"Hafta sonu açık mısınız?\",\"a\":\"Cumartesi günleri 09:30 - 18:00 arası hasta kabulümüz vardır.\"},{\"q\":\"Kredi kartına taksit yapılıyor mu?\",\"a\":\"Tüm anlaşmalı kartlara tedavi planına göre taksit imkanı sunulmaktadır.\"}]",
+      "viewsCount": 0,
+      "chatsCount": 0,
+      "appointmentsBookedCount": 0,
+      "checkoutClicksCount": 0,
+      "lastInteractedAt": null,
+      "createdAt": "2026-11-27T16:14:40.624Z"
+    },
+    {
+      "id": 6,
+      "leadId": 6,
+      "productSlug": "kobi-asistan-pro",
+      "slug": "ozel-veradent-agiz-ve-dis-sagligi-atasehir-6",
+      "headline": "Özel VeraDent Ağız ve Diş Sağlığı (Ataşehir) — 7/24 Akıllı WhatsApp & Randevu Asistanı",
+      "subheadline": "İstanbul / Ataşehir şubeniz için özel hazırlanan canlı müşteri karşılama ve randevu simülasyonu.",
+      "sector": "dental",
+      "city": "İstanbul / Ataşehir",
+      "accentColor": "#0f766e",
+      "assistantName": "Selin (Özel VeraDent Ağız ve Diş Sağlığı (Ataşehir) Dijital Hasta Koordinatörü)",
+      "welcomeMessage": "Merhaba! 👋 Özel VeraDent Ağız ve Diş Sağlığı (Ataşehir) dijital hattına hoş geldiniz. Hizmetlerimiz, güncel fiyat aralıklarımız veya uygun randevu saatlerimiz için hemen yazabilirsiniz.",
+      "servicesJson": "[{\"name\":\"İlk Muayene & Panoramik Röntgen\",\"duration\":\"30 dk\",\"priceRange\":\"Ücretsiz Ön Değerlendirme\"},{\"name\":\"İmplant & Zirkonyum Planlama\",\"duration\":\"45 dk\",\"priceRange\":\"Hekim Muayenesi Sonrası Netleşir\"},{\"name\":\"Diş Taşı Temizliği & Beyazlatma\",\"duration\":\"40 dk\",\"priceRange\":\"2.500 ₺ - 6.500 ₺\"},{\"name\":\"Kanal Tedavisi & Dolgu\",\"duration\":\"45 dk\",\"priceRange\":\"3.000 ₺ - 5.500 ₺\"}]",
+      "faqJson": "[{\"q\":\"Hafta sonu açık mısınız?\",\"a\":\"Cumartesi günleri 09:30 - 18:00 arası hasta kabulümüz vardır.\"},{\"q\":\"Kredi kartına taksit yapılıyor mu?\",\"a\":\"Tüm anlaşmalı kartlara tedavi planına göre taksit imkanı sunulmaktadır.\"}]",
+      "viewsCount": 0,
+      "chatsCount": 0,
+      "appointmentsBookedCount": 0,
+      "checkoutClicksCount": 0,
+      "lastInteractedAt": null,
+      "createdAt": "2026-11-27T16:14:40.624Z"
+    },
     {
       "id": 5,
       "leadId": 5,
@@ -555,9 +758,61 @@
       "status": "PENDING_APPROVAL",
       "createdAt": "2026-11-26T14:57:52.239Z",
       "sentAt": null
+    },
+    {
+      "id": 3,
+      "leadId": 6,
+      "demoSlug": "ozel-veradent-agiz-ve-dis-sagligi-atasehir-6",
+      "channel": "whatsapp",
+      "variant": "A",
+      "hookStyle": "2 Adımlı İzinli Erişim (Linksiz İlk Mesaj + Yanıt Sonrası Özel Demo)",
+      "subject": null,
+      "body": "[ADIM 1 — İLK TEMAS (LİNKSİZ / SPAM RİSKSİZ)]: Merhaba Özel VeraDent Ağız ve Diş Sağlığı (Ataşehir) ekibi, akşam 19:00 sonrası ve yoğun saatlerde WhatsApp/Instagram'dan gelen fiyat ve randevu sorularını ekibinize destek olarak 3 saniyede yanıtlayan, sadece sizin hizmet listenize özel bir test asistanı hazırladım. İncelemeniz için size özel kapalı test ekranını buradan paylaşmamı ister misiniz?\n\n[ADIM 2 — \"OLUR GÖNDERİN\" YANITI GELİNCE]: Teşekkürler! Sadece Özel VeraDent Ağız ve Diş Sağlığı (Ataşehir) için hazırladığımız özel test ekranı burada, kendi müşteriniz gibi yazıp deneyebilirsiniz (beğenirseniz 14 gün ücretsiz kuruyoruz): https://abydevprog.github.io/VMS/demo/ozel-veradent-agiz-ve-dis-sagligi-atasehir-6/",
+      "status": "PENDING_APPROVAL",
+      "createdAt": "2026-11-27T16:14:40.624Z",
+      "sentAt": null
+    },
+    {
+      "id": 4,
+      "leadId": 7,
+      "demoSlug": "ozel-novadent-klinik-atasehir-7",
+      "channel": "whatsapp",
+      "variant": "B",
+      "hookStyle": "Mesai Dışı Yedek Asistan Gözlemi (Linksiz İzin İsteme)",
+      "subject": null,
+      "body": "[ADIM 1 — İLK TEMAS (LİNKSİZ / İZİNLİ)]: Merhaba Özel NovaDent Klinik (Ataşehir) yetkilisi, İstanbul/Ataşehir bölgesinde akşam saatlerinde gelen mesajların önemli kısmı sabaha kadar beklediği için kaçabiliyor. Mevcut düzeninizi bozmadan sadece mesai dışı ve yoğun anlarda devreye giren size özel bir WhatsApp karşılama simülasyonu kurguladık. 30 saniyede göz atmanız için özel bağlantıyı iletmem uygun olur mu?\n\n[ADIM 2 — ONAY SONRASI ÖZEL SUNUM]: Memnuniyetle paylaşıyorum; yalnızca şubenize özel hazırlanan canlı test ekranı: https://abydevprog.github.io/VMS/demo/ozel-novadent-klinik-atasehir-7/",
+      "status": "PENDING_APPROVAL",
+      "createdAt": "2026-11-27T16:14:40.624Z",
+      "sentAt": null
     }
   ],
   "approvals": [
+    {
+      "id": 4,
+      "code": "ONAY-104",
+      "gateKey": "OUTBOUND_MESSAGE",
+      "agentId": "sales",
+      "title": "Özel NovaDent Klinik (Ataşehir) — WhatsApp Canlı Demo Daveti (Varyant B)",
+      "summary": "Skor: 91/100 | Demo: /demo/ozel-novadent-klinik-atasehir-7 | Kanca: Mesai Dışı Yedek Asistan Gözlemi (Linksiz İzin İsteme)",
+      "payloadJson": "{\"leadId\":7,\"outreachId\":4,\"demoSlug\":\"ozel-novadent-klinik-atasehir-7\",\"targetPhone\":\"+905320002007\",\"variant\":\"B\"}",
+      "status": "PENDING",
+      "decidedBy": null,
+      "createdAt": "2026-11-27T16:14:40.628Z",
+      "decidedAt": null
+    },
+    {
+      "id": 3,
+      "code": "ONAY-103",
+      "gateKey": "OUTBOUND_MESSAGE",
+      "agentId": "sales",
+      "title": "Özel VeraDent Ağız ve Diş Sağlığı (Ataşehir) — WhatsApp Canlı Demo Daveti (Varyant A)",
+      "summary": "Skor: 88/100 | Demo: /demo/ozel-veradent-agiz-ve-dis-sagligi-atasehir-6 | Kanca: 2 Adımlı İzinli Erişim (Linksiz İlk Mesaj + Yanıt Sonrası Özel Demo)",
+      "payloadJson": "{\"leadId\":6,\"outreachId\":3,\"demoSlug\":\"ozel-veradent-agiz-ve-dis-sagligi-atasehir-6\",\"targetPhone\":\"+905320002006\",\"variant\":\"A\"}",
+      "status": "PENDING",
+      "decidedBy": null,
+      "createdAt": "2026-11-27T16:14:40.626Z",
+      "decidedAt": null
+    },
     {
       "id": 2,
       "code": "ONAY-2",
@@ -586,6 +841,19 @@
     }
   ],
   "posts": [
+    {
+      "id": 3,
+      "slug": "istanbul-dis-agiz-sagligi-klinigi-isletmelerinde-whatsapp-ai-ile-0621",
+      "title": "İstanbul Diş & Ağız Sağlığı Kliniği İşletmelerinde WhatsApp AI ile Randevu Doluluğunu Artırma Rehberi (#3)",
+      "excerpt": "Diş & Ağız Sağlığı Kliniği işletmelerinde mesai dışı müşteri kaybını önleyen 7/24 Türkçe WhatsApp ve randevu otomasyonu stratejileri.",
+      "sector": "dental",
+      "targetKeyword": "diş & ağız sağlığı kliniği whatsapp randevu otomasyonu",
+      "bodyMarkdown": "## Diş & Ağız Sağlığı Kliniği İşletmelerinde İlk 60 Saniye Kuralı\n\nReklam ve Google Haritalar üzerinden gelen potansiyel müşteriler, ilk mesajlarına **1 dakika içinde** yanıt aldıklarında randevu oluşturma olasılıkları **3,4 kat** artmaktadır.\n\n### Neden Klasik Sekreterya Yeterli Olmuyor?\n\n- Akşam 19:00 sonrası ve pazar günleri gelen talepler cevapsız kalır.\n- Yoğun saatlerde telefon meşgulken WhatsApp mesajları birikir.\n- Manuel hatırlatma unutulduğunda randevuya gelmeme (no-show) oranı yükselir.\n\n### KOBİ Asistan Pro ile 10 Dakikada Kurulum\n\nİşletmenizin kendi hizmet listesi ve fiyat aralıklarıyla eğitilen Türkçe yapay zeka asistanı, müşterilerinizi 7/24 karşılar ve uygun saatlere otomatik randevu yazar.",
+      "socialHook": "İstanbul'daki Diş & Ağız Sağlığı Kliniği sahipleri: Mesai dışı kaçan her 3 mesajdan 1'i hazır randevuya dönüşebilir. Kendi işletme adınızla canlı demoyu ücretsiz deneyin!",
+      "viewsCount": 1,
+      "status": "PUBLISHED",
+      "createdAt": "2026-11-27T16:14:40.622Z"
+    },
     {
       "id": 2,
       "slug": "istanbul-restoran-ozel-davet-mekani-isletmelerinde-whatsapp-ai-i-2234",
