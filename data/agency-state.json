@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-11-27T16:14:41.047Z",
+  "exportedAt": "2026-11-27T19:08:30.193Z",
   "agents": [
     {
       "id": "coo",
@@ -61,10 +61,10 @@
       "modelId": "gemini-4-hydrogen",
       "thinkingLevel": "medium",
       "dailyBudgetUsd": 0.5,
-      "playbookVersion": 2,
+      "playbookVersion": 3,
       "status": "idle",
       "tasksCompleted": 2,
-      "lastActiveAt": "2026-11-27T16:14:40.622Z"
+      "lastActiveAt": "2026-11-27T19:08:29.689Z"
     },
     {
       "id": "sales",
@@ -74,10 +74,10 @@
       "modelId": "gemini-4-hydrogen",
       "thinkingLevel": "high",
       "dailyBudgetUsd": 0.7,
-      "playbookVersion": 2,
+      "playbookVersion": 3,
       "status": "idle",
       "tasksCompleted": 4,
-      "lastActiveAt": "2026-11-27T16:14:40.629Z"
+      "lastActiveAt": "2026-11-27T19:08:29.689Z"
     },
     {
       "id": "kaizen",
@@ -89,11 +89,31 @@
       "dailyBudgetUsd": 0.7,
       "playbookVersion": 1,
       "status": "idle",
-      "tasksCompleted": 1,
-      "lastActiveAt": "2026-11-26T14:57:52.259Z"
+      "tasksCompleted": 2,
+      "lastActiveAt": "2026-11-27T19:08:29.691Z"
     }
   ],
   "playbooks": [
+    {
+      "id": 10,
+      "agentId": "sales",
+      "version": 3,
+      "systemPrompt": "Sen Avcı’sın. Hedef KOBİ’leri puanlar, her işletmenin kendi adıyla çalışan özel /demo/[slug] sayfasını hazırlar ve spam kokmayan, doğrudan işletmeye özel hazırlanan demoyu gösteren A/B varyantlı Türkçe WhatsApp ve e-posta mesajları yazarsın.\nGüncel Kaizen Kuralı (v2): [Kaizen v2] Varyant A kancasını birincil yap; dental dikeyinde ilk mesajda 30 sn canlı sohbet vurgusu kullan (%50 etkileşim kanıtı)\nGüncel Kaizen Kuralı (v3): [Kaizen v3] Varyant A kancasını birincil yap; dental dikeyinde ilk mesajda 30 sn canlı sohbet vurgusu kullan (%50 etkileşim kanıtı)",
+      "winningPatternsJson": "[\"[Kaizen v3] Varyant A kancasını birincil yap; dental dikeyinde ilk mesajda 30 sn canlı sohbet vurgusu kullan (%50 etkileşim kanıtı)\",\"[Kaizen v2] Varyant A kancasını birincil yap; dental dikeyinde ilk mesajda 30 sn canlı sohbet vurgusu kullan (%50 etkileşim kanıtı)\",\"Mesajın ilk cümlesinde işletmenin kendi adını ve hazır canlı demo linkini geçir\",\"Kısa, saygılı ve 30 saniyede test edilebilir davet dili kullan\"]",
+      "avoidPatternsJson": "[\"Genel geçer kurumsal klişe ifadeler\",\"Canlı demo linki içermeyen soğuk mesajlar\"]",
+      "kaizenReason": "Kaizen Analizi: Demo görüntülenmelerinin %50'i canlı AI sohbetine dönüştü (1 simüle randevu). Varyant A (\"İşletmeye Özel Hazır Canlı Demo Daveti\") daha yüksek güven sağladı; Avcı (Satış) ve Yankı (Büyüme) Playbook'ları d",
+      "createdAt": "2026-11-27T19:08:29.689Z"
+    },
+    {
+      "id": 11,
+      "agentId": "growth",
+      "version": 3,
+      "systemPrompt": "Sen Yankı’sın. Türkiye’deki işletme sahiplerinin Google’da aradığı somut sorunlara yönelik yüksek dönüşümlü Türkçe SEO rehberleri ve Instagram/LinkedIn vaka içerikleri üretirsin.\nGüncel Kaizen Kuralı (v2): [Kaizen v2] dental sektöründeki gerçek randevu simülasyonu istatistiklerini SEO başlıklarının ilk 60 karakterinde geçir\nGüncel Kaizen Kuralı (v3): [Kaizen v3] dental sektöründeki gerçek randevu simülasyonu istatistiklerini SEO başlıklarının ilk 60 karakterinde geçir",
+      "winningPatternsJson": "[\"[Kaizen v3] dental sektöründeki gerçek randevu simülasyonu istatistiklerini SEO başlıklarının ilk 60 karakterinde geçir\",\"[Kaizen v2] dental sektöründeki gerçek randevu simülasyonu istatistiklerini SEO başlıklarının ilk 60 karakterinde geçir\",\"Başlıklarda somut yüzde ve sektörel kazanç belirt\",\"Her yazının sonuna canlı demo deneme çağrısı ekle\"]",
+      "avoidPatternsJson": "[\"Genel geçer kurumsal klişe ifadeler\",\"Canlı demo linki içermeyen soğuk mesajlar\"]",
+      "kaizenReason": "Kaizen Analizi: Demo görüntülenmelerinin %50'i canlı AI sohbetine dönüştü (1 simüle randevu). Varyant A (\"İşletmeye Özel Hazır Canlı Demo Daveti\") daha yüksek güven sağladı; Avcı (Satış) ve Yankı (Büyüme) Playbook'ları d",
+      "createdAt": "2026-11-27T19:08:29.689Z"
+    },
     {
       "id": 8,
       "agentId": "sales",
@@ -187,6 +207,17 @@
   ],
   "shifts": [
     {
+      "id": 8,
+      "shiftType": "night",
+      "shiftDate": "2026-11-27",
+      "triggerSource": "antigravity",
+      "status": "completed",
+      "summary": "🌙 Gece Kaizen Vardiyası: Varyant A öne çıktı; Satış & Büyüme Playbook sürümü v3 seviyesine yükseltildi.",
+      "metricsJson": "{\"winningVariant\":\"A\",\"newPlaybookVersion\":3,\"insightsSummary\":\"Kaizen Analizi: Demo görüntülenmelerinin %50'i canlı AI sohbetine dönüştü (1 simüle randevu). Varyant A (\\\"İşletmeye Özel Hazır Canlı Demo Daveti\\\") daha yüksek güven sağladı; Avcı (Satış) ve Yankı (Büyüme) Playbook'ları dental sektörü vaka kanıtlarıyla üst sürüme yükseltildi.\"}",
+      "startedAt": "2026-11-27T19:08:29.682Z",
+      "completedAt": "2026-11-27T19:08:29.691Z"
+    },
+    {
       "id": 7,
       "shiftType": "afternoon",
       "shiftDate": "2026-11-27",
@@ -265,6 +296,20 @@
     }
   ],
   "tasks": [
+    {
+      "id": 16,
+      "shiftRunId": 8,
+      "agentId": "kaizen",
+      "title": "Gece Kaizen Öz-Evrimi (Playbook v3 Güncellemesi)",
+      "executionMode": "antigravity_native",
+      "modelUsed": "antigravity-native (gemini-4-carbon)",
+      "tokensUsed": 0,
+      "costUsd": 0,
+      "status": "completed",
+      "outputSummary": "Kaizen Analizi: Demo görüntülenmelerinin %50'i canlı AI sohbetine dönüştü (1 simüle randevu). Varyant A (\"İşletmeye Özel Hazır Canlı Demo Daveti\") daha yüksek güven sağladı; Avcı (Satış) ve Yankı (Büyüme) Playbook'ları dental sektörü vaka kanıtlarıyla üst sürüme yükseltildi.",
+      "artifactPath": null,
+      "createdAt": "2026-11-27T19:08:29.691Z"
+    },
     {
       "id": 15,
       "shiftRunId": 7,
@@ -882,6 +927,18 @@
     }
   ],
   "kaizen": [
+    {
+      "id": 2,
+      "shiftRunId": 8,
+      "evaluatedDate": "2026-11-27",
+      "winningVariant": "A",
+      "topSector": "dental",
+      "conversionRatePct": 50,
+      "insightsSummary": "Kaizen Analizi: Demo görüntülenmelerinin %50'i canlı AI sohbetine dönüştü (1 simüle randevu). Varyant A (\"İşletmeye Özel Hazır Canlı Demo Daveti\") daha yüksek güven sağladı; Avcı (Satış) ve Yankı (Büyüme) Playbook'ları dental sektörü vaka kanıtlarıyla üst sürüme yükseltildi.",
+      "upgradedAgentsJson": "[{\"agentId\":\"sales\",\"fromVersion\":2,\"toVersion\":3,\"change\":\"[Kaizen v3] Varyant A kancasını birincil yap; dental dikeyinde ilk mesajda 30 sn canlı sohbet vurgusu kullan (%50 etkileşim kanıtı)\"},{\"agentId\":\"growth\",\"fromVersion\":2,\"toVersion\":3,\"change\":\"[Kaizen v3] dental sektöründeki gerçek randevu simülasyonu istatistiklerini SEO başlıklarının ilk 60 karakterinde geçir\"}]",
+      "newBuildSpecPath": "backlog/build-specs/2026-11-27-kobi-modul-gelistirme.md",
+      "createdAt": "2026-11-27T19:08:29.689Z"
+    },
     {
       "id": 1,
       "shiftRunId": 4,
