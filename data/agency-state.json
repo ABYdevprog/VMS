@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-11-28T01:46:46.033Z",
+  "exportedAt": "2026-11-28T15:07:58.590Z",
   "agents": [
     {
       "id": "coo",
@@ -11,8 +11,8 @@
       "dailyBudgetUsd": 1,
       "playbookVersion": 1,
       "status": "idle",
-      "tasksCompleted": 2,
-      "lastActiveAt": "2026-11-27T16:14:40.618Z"
+      "tasksCompleted": 3,
+      "lastActiveAt": "2026-11-28T15:07:58.136Z"
     },
     {
       "id": "researcher",
@@ -24,8 +24,8 @@
       "dailyBudgetUsd": 0.5,
       "playbookVersion": 1,
       "status": "idle",
-      "tasksCompleted": 2,
-      "lastActiveAt": "2026-11-27T16:14:40.612Z"
+      "tasksCompleted": 3,
+      "lastActiveAt": "2026-11-28T15:07:58.130Z"
     },
     {
       "id": "pm",
@@ -37,8 +37,8 @@
       "dailyBudgetUsd": 0.6,
       "playbookVersion": 1,
       "status": "idle",
-      "tasksCompleted": 2,
-      "lastActiveAt": "2026-11-27T16:14:40.616Z"
+      "tasksCompleted": 3,
+      "lastActiveAt": "2026-11-28T15:07:58.135Z"
     },
     {
       "id": "builder",
@@ -50,8 +50,8 @@
       "dailyBudgetUsd": 1,
       "playbookVersion": 1,
       "status": "idle",
-      "tasksCompleted": 2,
-      "lastActiveAt": "2026-11-27T16:14:40.620Z"
+      "tasksCompleted": 3,
+      "lastActiveAt": "2026-11-28T15:07:58.139Z"
     },
     {
       "id": "growth",
@@ -63,8 +63,8 @@
       "dailyBudgetUsd": 0.5,
       "playbookVersion": 3,
       "status": "idle",
-      "tasksCompleted": 2,
-      "lastActiveAt": "2026-11-27T19:08:29.689Z"
+      "tasksCompleted": 3,
+      "lastActiveAt": "2026-11-28T15:07:58.141Z"
     },
     {
       "id": "sales",
@@ -76,8 +76,8 @@
       "dailyBudgetUsd": 0.7,
       "playbookVersion": 3,
       "status": "idle",
-      "tasksCompleted": 4,
-      "lastActiveAt": "2026-11-27T19:08:29.689Z"
+      "tasksCompleted": 6,
+      "lastActiveAt": "2026-11-28T15:07:58.147Z"
     },
     {
       "id": "kaizen",
@@ -207,6 +207,39 @@
   ],
   "shifts": [
     {
+      "id": 11,
+      "shiftType": "afternoon",
+      "shiftDate": "2026-11-28",
+      "triggerSource": "antigravity",
+      "status": "completed",
+      "summary": "🌇 İkindi Vardiyası: 2 yeni KOBİ adayı puanlandı, özel canlı demolar (/demo/kuzey-yildizi-emlak-danismanlik-atasehir-8, /demo/merkez-portfoy-gayrimenkul-ofisi-atasehir-9) üretildi ve onay kuyruğuna eklendi (ONAY-105 (PENDING), ONAY-106 (PENDING)).",
+      "metricsJson": "{\"createdLeads\":2,\"createdDemos\":[\"/demo/kuzey-yildizi-emlak-danismanlik-atasehir-8\",\"/demo/merkez-portfoy-gayrimenkul-ofisi-atasehir-9\"],\"queuedCodes\":[\"ONAY-105 (PENDING)\",\"ONAY-106 (PENDING)\"]}",
+      "startedAt": "2026-11-28T15:07:58.142Z",
+      "completedAt": "2026-11-28T15:07:58.148Z"
+    },
+    {
+      "id": 10,
+      "shiftType": "midday",
+      "shiftDate": "2026-11-28",
+      "triggerSource": "antigravity",
+      "status": "completed",
+      "summary": "☀️ Öğle Vardiyası: 7 canlı demo doğrulandı, yeni BuildSpec (backlog/build-specs/2026-11-28-kobi-modul-gelistirme.md) ve SEO rehberi (/blog/istanbul-emlak-gayrimenkul-ofisi-isletmelerinde-whatsapp-ai-ile--8140) yayınlandı.",
+      "metricsJson": "{\"buildSpecPath\":\"backlog/build-specs/2026-11-28-kobi-modul-gelistirme.md\",\"verifiedDemos\":7}",
+      "startedAt": "2026-11-28T15:07:58.137Z",
+      "completedAt": "2026-11-28T15:07:58.141Z"
+    },
+    {
+      "id": 9,
+      "shiftType": "morning",
+      "shiftDate": "2026-11-28",
+      "triggerSource": "antigravity",
+      "status": "completed",
+      "summary": "🌅 Sabah Vardiyası: İstanbul/Ataşehir Emlak & Gayrimenkul Ofisi fırsatı seçildi. Sabah sprinti onaylandı: Hedef İstanbul/Ataşehir Emlak & Gayrimenkul Ofisi dikeyi. Öğle vardiyasında SEO rehberi + BuildSpec üretilecek; ikindi vardiyasında kişiselleştirilmiş canlı demolar hazırlanıp onay kuyruğuna sunulacak.",
+      "metricsJson": "{\"sector\":\"realestate\",\"city\":\"İstanbul\",\"district\":\"Ataşehir\"}",
+      "startedAt": "2026-11-28T15:07:58.127Z",
+      "completedAt": "2026-11-28T15:07:58.137Z"
+    },
+    {
       "id": 8,
       "shiftType": "night",
       "shiftDate": "2026-11-27",
@@ -296,6 +329,104 @@
     }
   ],
   "tasks": [
+    {
+      "id": 23,
+      "shiftRunId": 11,
+      "agentId": "sales",
+      "title": "Merkez Portföy Gayrimenkul Ofisi (Ataşehir) Canlı Demo & Varyant B Satış Paketi",
+      "executionMode": "antigravity_native",
+      "modelUsed": "antigravity-native (gemini-4-hydrogen)",
+      "tokensUsed": 0,
+      "costUsd": 0,
+      "status": "completed",
+      "outputSummary": "/demo/merkez-portfoy-gayrimenkul-ofisi-atasehir-9 oluşturuldu ve ONAY-106 koduyla onay kapısına iletildi.",
+      "artifactPath": "/demo/merkez-portfoy-gayrimenkul-ofisi-atasehir-9",
+      "createdAt": "2026-11-28T15:07:58.147Z"
+    },
+    {
+      "id": 22,
+      "shiftRunId": 11,
+      "agentId": "sales",
+      "title": "Kuzey Yıldızı Emlak Danışmanlık (Ataşehir) Canlı Demo & Varyant A Satış Paketi",
+      "executionMode": "antigravity_native",
+      "modelUsed": "antigravity-native (gemini-4-hydrogen)",
+      "tokensUsed": 0,
+      "costUsd": 0,
+      "status": "completed",
+      "outputSummary": "/demo/kuzey-yildizi-emlak-danismanlik-atasehir-8 oluşturuldu ve ONAY-105 koduyla onay kapısına iletildi.",
+      "artifactPath": "/demo/kuzey-yildizi-emlak-danismanlik-atasehir-8",
+      "createdAt": "2026-11-28T15:07:58.145Z"
+    },
+    {
+      "id": 21,
+      "shiftRunId": 10,
+      "agentId": "growth",
+      "title": "Türkçe SEO Rehberi Yayını: İstanbul Emlak & Gayrimenkul Ofisi İşletmelerinde Wh...",
+      "executionMode": "antigravity_native",
+      "modelUsed": "antigravity-native (gemini-4-hydrogen)",
+      "tokensUsed": 0,
+      "costUsd": 0,
+      "status": "completed",
+      "outputSummary": "/blog/istanbul-emlak-gayrimenkul-ofisi-isletmelerinde-whatsapp-ai-ile--8140 adresinde yeni organik içerik ve sosyal medya kancası yayınlandı.",
+      "artifactPath": "/blog/istanbul-emlak-gayrimenkul-ofisi-isletmelerinde-whatsapp-ai-ile--8140",
+      "createdAt": "2026-11-28T15:07:58.141Z"
+    },
+    {
+      "id": 20,
+      "shiftRunId": 10,
+      "agentId": "builder",
+      "title": "QA Doğrulaması (7 Demo) & Antigravity BuildSpec Üretimi",
+      "executionMode": "antigravity_native",
+      "modelUsed": "antigravity-native (gemini-4-carbon)",
+      "tokensUsed": 0,
+      "costUsd": 0,
+      "status": "completed",
+      "outputSummary": "7 canlı demo şablonu doğrulandı; yeni mühendislik iş emri backlog/build-specs/2026-11-28-kobi-modul-gelistirme.md dosyasına yazıldı.",
+      "artifactPath": "backlog/build-specs/2026-11-28-kobi-modul-gelistirme.md",
+      "createdAt": "2026-11-28T15:07:58.139Z"
+    },
+    {
+      "id": 19,
+      "shiftRunId": 9,
+      "agentId": "coo",
+      "title": "Günlük 4 Vardiya Koordinasyon Planı",
+      "executionMode": "antigravity_native",
+      "modelUsed": "antigravity-native (gemini-4-carbon)",
+      "tokensUsed": 0,
+      "costUsd": 0,
+      "status": "completed",
+      "outputSummary": "Sabah sprinti onaylandı: Hedef İstanbul/Ataşehir Emlak & Gayrimenkul Ofisi dikeyi. Öğle vardiyasında SEO rehberi + BuildSpec üretilecek; ikindi vardiyasında kişiselleştirilmiş canlı demolar hazırlanıp onay kuyruğuna sunulacak.",
+      "artifactPath": null,
+      "createdAt": "2026-11-28T15:07:58.136Z"
+    },
+    {
+      "id": 18,
+      "shiftRunId": 9,
+      "agentId": "pm",
+      "title": "Emlak & Gayrimenkul Ofisi Değer Önerisi & Paket Kurgusu",
+      "executionMode": "antigravity_native",
+      "modelUsed": "antigravity-native (gemini-4-neon)",
+      "tokensUsed": 0,
+      "costUsd": 0,
+      "status": "completed",
+      "outputSummary": "\"Ayda 68.000 ₺ değerinde kaçan randevuyu, günde sadece 100 ₺ maliyetle 7/24 yakalayın\" konumlandırması ve 14 gün kredi kartsız canlı demo kancası aktif edildi.",
+      "artifactPath": null,
+      "createdAt": "2026-11-28T15:07:58.135Z"
+    },
+    {
+      "id": 17,
+      "shiftRunId": 9,
+      "agentId": "researcher",
+      "title": "İstanbul/Ataşehir Emlak & Gayrimenkul Ofisi Fırsat Taraması",
+      "executionMode": "antigravity_native",
+      "modelUsed": "antigravity-native (gemini-4-hydrogen)",
+      "tokensUsed": 0,
+      "costUsd": 0,
+      "status": "completed",
+      "outputSummary": "İstanbul/Ataşehir bölgesindeki Emlak & Gayrimenkul Ofisi işletmelerinde mesai dışı WhatsApp dönüş süresi ortalama 4,5 saattir; bu gecikme ayda ortalama 35.000 ₺ - 75.000 ₺ ciro kaybı yaratmaktadır.",
+      "artifactPath": null,
+      "createdAt": "2026-11-28T15:07:58.130Z"
+    },
     {
       "id": 16,
       "shiftRunId": 8,
@@ -523,6 +654,36 @@
   ],
   "leads": [
     {
+      "id": 9,
+      "businessName": "Merkez Portföy Gayrimenkul Ofisi (Ataşehir)",
+      "slug": "merkez-portfoy-gayrimenkul-ofisi-atasehir-9",
+      "sector": "realestate",
+      "city": "İstanbul",
+      "district": "Ataşehir",
+      "phone": "+905320002009",
+      "email": "iletisim@merkez-portfoy-gayrimenkul-ofisi.com.tr",
+      "instagramHandle": "@merkezportfoygayrimenkulofisi",
+      "painPoint": "Alıcı bütçe ve oda kriterlerinin ön elemeden geçmeden danışmanların vaktini tüketmesi",
+      "leadScore": 97,
+      "stage": "AWAITING_APPROVAL",
+      "createdAt": "2026-11-28T15:07:58.143Z"
+    },
+    {
+      "id": 8,
+      "businessName": "Kuzey Yıldızı Emlak Danışmanlık (Ataşehir)",
+      "slug": "kuzey-yildizi-emlak-danismanlik-atasehir-8",
+      "sector": "realestate",
+      "city": "İstanbul",
+      "district": "Ataşehir",
+      "phone": "+905320002008",
+      "email": "iletisim@kuzey-yildizi-emlak-danismanlik.com.tr",
+      "instagramHandle": "@kuzeyyildiziemlakdanismanlik",
+      "painPoint": "Sahada yer gösterimindeyken kaçan telefonların ve ilan sorularının sıcak alıcı kaybına yol açması",
+      "leadScore": 94,
+      "stage": "AWAITING_APPROVAL",
+      "createdAt": "2026-11-28T15:07:58.143Z"
+    },
+    {
       "id": 7,
       "businessName": "Özel NovaDent Klinik (Ataşehir)",
       "slug": "ozel-novadent-klinik-atasehir-7",
@@ -629,6 +790,48 @@
     }
   ],
   "demos": [
+    {
+      "id": 9,
+      "leadId": 9,
+      "productSlug": "kobi-asistan-pro",
+      "slug": "merkez-portfoy-gayrimenkul-ofisi-atasehir-9",
+      "headline": "Merkez Portföy Gayrimenkul Ofisi (Ataşehir) — 7/24 Akıllı WhatsApp & Randevu Asistanı",
+      "subheadline": "İstanbul / Ataşehir şubeniz için özel hazırlanan canlı müşteri karşılama ve randevu simülasyonu.",
+      "sector": "realestate",
+      "city": "İstanbul / Ataşehir",
+      "accentColor": "#1d4ed8",
+      "assistantName": "Selin (Merkez Portföy Gayrimenkul Ofisi (Ataşehir) 7/24 Portföy & Yatırım Asistanı)",
+      "welcomeMessage": "Merhaba! 👋 Merkez Portföy Gayrimenkul Ofisi (Ataşehir) dijital hattına hoş geldiniz. Hizmetlerimiz, güncel fiyat aralıklarımız veya uygun randevu saatlerimiz için hemen yazabilirsiniz.",
+      "servicesJson": "[{\"name\":\"Satılık Konut & Villa Gösterim Randevusu\",\"duration\":\"45 dk\",\"priceRange\":\"Portföye Özel Sunum\"},{\"name\":\"Ücretsiz Ekspertiz & Değerleme Talebi\",\"duration\":\"30 dk\",\"priceRange\":\"Ücretsiz Bölge Analizi\"},{\"name\":\"Ticari Gayrimenkul & Dükkan Kiralama\",\"duration\":\"45 dk\",\"priceRange\":\"Kurumsal Portföy\"},{\"name\":\"Kredi & Tapu Süreç Danışmanlığı\",\"duration\":\"30 dk\",\"priceRange\":\"Hizmete Dahil\"}]",
+      "faqJson": "[{\"q\":\"İlanlardaki daireleri hafta sonu görebilir miyiz?\",\"a\":\"Evet, danışmanlarımız Cumartesi ve Pazar günleri randevulu yer gösterimi yapmaktadır.\"},{\"q\":\"Mülkümü satmak istiyorum, değerleme yapıyor musunuz?\",\"a\":\"Bölge emsal verileriyle 24 saat içinde ücretsiz değerleme raporu hazırlıyoruz.\"}]",
+      "viewsCount": 0,
+      "chatsCount": 0,
+      "appointmentsBookedCount": 0,
+      "checkoutClicksCount": 0,
+      "lastInteractedAt": null,
+      "createdAt": "2026-11-28T15:07:58.143Z"
+    },
+    {
+      "id": 8,
+      "leadId": 8,
+      "productSlug": "kobi-asistan-pro",
+      "slug": "kuzey-yildizi-emlak-danismanlik-atasehir-8",
+      "headline": "Kuzey Yıldızı Emlak Danışmanlık (Ataşehir) — 7/24 Akıllı WhatsApp & Randevu Asistanı",
+      "subheadline": "İstanbul / Ataşehir şubeniz için özel hazırlanan canlı müşteri karşılama ve randevu simülasyonu.",
+      "sector": "realestate",
+      "city": "İstanbul / Ataşehir",
+      "accentColor": "#1d4ed8",
+      "assistantName": "Selin (Kuzey Yıldızı Emlak Danışmanlık (Ataşehir) 7/24 Portföy & Yatırım Asistanı)",
+      "welcomeMessage": "Merhaba! 👋 Kuzey Yıldızı Emlak Danışmanlık (Ataşehir) dijital hattına hoş geldiniz. Hizmetlerimiz, güncel fiyat aralıklarımız veya uygun randevu saatlerimiz için hemen yazabilirsiniz.",
+      "servicesJson": "[{\"name\":\"Satılık Konut & Villa Gösterim Randevusu\",\"duration\":\"45 dk\",\"priceRange\":\"Portföye Özel Sunum\"},{\"name\":\"Ücretsiz Ekspertiz & Değerleme Talebi\",\"duration\":\"30 dk\",\"priceRange\":\"Ücretsiz Bölge Analizi\"},{\"name\":\"Ticari Gayrimenkul & Dükkan Kiralama\",\"duration\":\"45 dk\",\"priceRange\":\"Kurumsal Portföy\"},{\"name\":\"Kredi & Tapu Süreç Danışmanlığı\",\"duration\":\"30 dk\",\"priceRange\":\"Hizmete Dahil\"}]",
+      "faqJson": "[{\"q\":\"İlanlardaki daireleri hafta sonu görebilir miyiz?\",\"a\":\"Evet, danışmanlarımız Cumartesi ve Pazar günleri randevulu yer gösterimi yapmaktadır.\"},{\"q\":\"Mülkümü satmak istiyorum, değerleme yapıyor musunuz?\",\"a\":\"Bölge emsal verileriyle 24 saat içinde ücretsiz değerleme raporu hazırlıyoruz.\"}]",
+      "viewsCount": 0,
+      "chatsCount": 0,
+      "appointmentsBookedCount": 0,
+      "checkoutClicksCount": 0,
+      "lastInteractedAt": null,
+      "createdAt": "2026-11-28T15:07:58.143Z"
+    },
     {
       "id": 7,
       "leadId": 7,
@@ -829,9 +1032,61 @@
       "status": "PENDING_APPROVAL",
       "createdAt": "2026-11-27T16:14:40.624Z",
       "sentAt": null
+    },
+    {
+      "id": 5,
+      "leadId": 8,
+      "demoSlug": "kuzey-yildizi-emlak-danismanlik-atasehir-8",
+      "channel": "whatsapp",
+      "variant": "A",
+      "hookStyle": "2 Adımlı İzinli Erişim (Linksiz İlk Mesaj + Yanıt Sonrası Özel Demo)",
+      "subject": null,
+      "body": "[ADIM 1 — İLK TEMAS (LİNKSİZ / SPAM RİSKSİZ)]: Merhaba Kuzey Yıldızı Emlak Danışmanlık (Ataşehir) ekibi, akşam 19:00 sonrası ve yoğun saatlerde WhatsApp/Instagram'dan gelen fiyat ve randevu sorularını ekibinize destek olarak 3 saniyede yanıtlayan, sadece sizin hizmet listenize özel bir test asistanı hazırladım. İncelemeniz için size özel kapalı test ekranını buradan paylaşmamı ister misiniz?\n\n[ADIM 2 — \"OLUR GÖNDERİN\" YANITI GELİNCE]: Teşekkürler! Sadece Kuzey Yıldızı Emlak Danışmanlık (Ataşehir) için hazırladığımız özel test ekranı burada, kendi müşteriniz gibi yazıp deneyebilirsiniz (beğenirseniz 14 gün ücretsiz kuruyoruz): https://abydevprog.github.io/VMS/demo/kuzey-yildizi-emlak-danismanlik-atasehir-8/",
+      "status": "PENDING_APPROVAL",
+      "createdAt": "2026-11-28T15:07:58.143Z",
+      "sentAt": null
+    },
+    {
+      "id": 6,
+      "leadId": 9,
+      "demoSlug": "merkez-portfoy-gayrimenkul-ofisi-atasehir-9",
+      "channel": "whatsapp",
+      "variant": "B",
+      "hookStyle": "Mesai Dışı Yedek Asistan Gözlemi (Linksiz İzin İsteme)",
+      "subject": null,
+      "body": "[ADIM 1 — İLK TEMAS (LİNKSİZ / İZİNLİ)]: Merhaba Merkez Portföy Gayrimenkul Ofisi (Ataşehir) yetkilisi, İstanbul/Ataşehir bölgesinde akşam saatlerinde gelen mesajların önemli kısmı sabaha kadar beklediği için kaçabiliyor. Mevcut düzeninizi bozmadan sadece mesai dışı ve yoğun anlarda devreye giren size özel bir WhatsApp karşılama simülasyonu kurguladık. 30 saniyede göz atmanız için özel bağlantıyı iletmem uygun olur mu?\n\n[ADIM 2 — ONAY SONRASI ÖZEL SUNUM]: Memnuniyetle paylaşıyorum; yalnızca şubenize özel hazırlanan canlı test ekranı: https://abydevprog.github.io/VMS/demo/merkez-portfoy-gayrimenkul-ofisi-atasehir-9/",
+      "status": "PENDING_APPROVAL",
+      "createdAt": "2026-11-28T15:07:58.143Z",
+      "sentAt": null
     }
   ],
   "approvals": [
+    {
+      "id": 6,
+      "code": "ONAY-106",
+      "gateKey": "OUTBOUND_MESSAGE",
+      "agentId": "sales",
+      "title": "Merkez Portföy Gayrimenkul Ofisi (Ataşehir) — WhatsApp Canlı Demo Daveti (Varyant B)",
+      "summary": "Skor: 97/100 | Demo: /demo/merkez-portfoy-gayrimenkul-ofisi-atasehir-9 | Kanca: Mesai Dışı Yedek Asistan Gözlemi (Linksiz İzin İsteme)",
+      "payloadJson": "{\"leadId\":9,\"outreachId\":6,\"demoSlug\":\"merkez-portfoy-gayrimenkul-ofisi-atasehir-9\",\"targetPhone\":\"+905320002009\",\"variant\":\"B\"}",
+      "status": "PENDING",
+      "decidedBy": null,
+      "createdAt": "2026-11-28T15:07:58.147Z",
+      "decidedAt": null
+    },
+    {
+      "id": 5,
+      "code": "ONAY-105",
+      "gateKey": "OUTBOUND_MESSAGE",
+      "agentId": "sales",
+      "title": "Kuzey Yıldızı Emlak Danışmanlık (Ataşehir) — WhatsApp Canlı Demo Daveti (Varyant A)",
+      "summary": "Skor: 94/100 | Demo: /demo/kuzey-yildizi-emlak-danismanlik-atasehir-8 | Kanca: 2 Adımlı İzinli Erişim (Linksiz İlk Mesaj + Yanıt Sonrası Özel Demo)",
+      "payloadJson": "{\"leadId\":8,\"outreachId\":5,\"demoSlug\":\"kuzey-yildizi-emlak-danismanlik-atasehir-8\",\"targetPhone\":\"+905320002008\",\"variant\":\"A\"}",
+      "status": "PENDING",
+      "decidedBy": null,
+      "createdAt": "2026-11-28T15:07:58.145Z",
+      "decidedAt": null
+    },
     {
       "id": 4,
       "code": "ONAY-104",
@@ -886,6 +1141,19 @@
     }
   ],
   "posts": [
+    {
+      "id": 4,
+      "slug": "istanbul-emlak-gayrimenkul-ofisi-isletmelerinde-whatsapp-ai-ile--8140",
+      "title": "İstanbul Emlak & Gayrimenkul Ofisi İşletmelerinde WhatsApp AI ile Randevu Doluluğunu Artırma Rehberi (#4)",
+      "excerpt": "Emlak & Gayrimenkul Ofisi işletmelerinde mesai dışı müşteri kaybını önleyen 7/24 Türkçe WhatsApp ve randevu otomasyonu stratejileri.",
+      "sector": "realestate",
+      "targetKeyword": "emlak & gayrimenkul ofisi whatsapp randevu otomasyonu",
+      "bodyMarkdown": "## Emlak & Gayrimenkul Ofisi İşletmelerinde İlk 60 Saniye Kuralı\n\nReklam ve Google Haritalar üzerinden gelen potansiyel müşteriler, ilk mesajlarına **1 dakika içinde** yanıt aldıklarında randevu oluşturma olasılıkları **3,4 kat** artmaktadır.\n\n### Neden Klasik Sekreterya Yeterli Olmuyor?\n\n- Akşam 19:00 sonrası ve pazar günleri gelen talepler cevapsız kalır.\n- Yoğun saatlerde telefon meşgulken WhatsApp mesajları birikir.\n- Manuel hatırlatma unutulduğunda randevuya gelmeme (no-show) oranı yükselir.\n\n### KOBİ Asistan Pro ile 10 Dakikada Kurulum\n\nİşletmenizin kendi hizmet listesi ve fiyat aralıklarıyla eğitilen Türkçe yapay zeka asistanı, müşterilerinizi 7/24 karşılar ve uygun saatlere otomatik randevu yazar.",
+      "socialHook": "İstanbul'daki Emlak & Gayrimenkul Ofisi sahipleri: Mesai dışı kaçan her 3 mesajdan 1'i hazır randevuya dönüşebilir. Kendi işletme adınızla canlı demoyu ücretsiz deneyin!",
+      "viewsCount": 1,
+      "status": "PUBLISHED",
+      "createdAt": "2026-11-28T15:07:58.141Z"
+    },
     {
       "id": 3,
       "slug": "istanbul-dis-agiz-sagligi-klinigi-isletmelerinde-whatsapp-ai-ile-0621",
